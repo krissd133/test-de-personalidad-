@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Personalidad</title>
+    <style>
+        :root {
+            --bg-color: #222222;
+            --card-bg: #2c2c2c;
+            --text-main: #ffffff;
+            --text-muted: #b0b0b0;
+            --accent-green: #00a86b;
+            --accent-purple: #8e7cc3;
+            --accent-orange: #f6b26b;
+            --tag-bg: #d9ead3;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            padding: 40px;
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .icon {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: var(--accent-green);
+            font-weight: 400;
+            margin: 10px 0;
+        }
+
+        .score {
+            color: var(--text-muted);
+            font-size: 0.9em;
+            margin-bottom: 25px;
+        }
+
+        .description {
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .tags-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .tag {
+            background-color: #e6f3ef; /* Color suave similar a la imagen */
+            color: #2d5a4c;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        /* Estilos de las barras */
+        .stats-container {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .stat-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 15px;
+        }
+
+        .label {
+            color: var(--text-main);
+            width: 100px;
+            font-size: 0.9em;
+        }
+
+        .progress-bg {
+            flex-grow: 1;
+            background-color: #3d3d3d;
+            height: 10px;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 5px;
+        }
+
+        .percentage {
+            color: var(--text-main);
+            width: 35px;
+            text-align: right;
+            font-size: 0.9em;
+        }
+
+        /* Botón */
+        .btn-retry {
+            margin-top: 30px;
+            background: transparent;
+            border: 1px solid #555;
+            color: var(--text-main);
+            padding: 12px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-retry:hover {
+            background-color: #3d3d3d;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div class="icon">⚖️</div>
+    <h1>Equilibrado</h1>
+    <p class="score">Puntuación total: 22 / 30</p>
+
+    <p class="description">
+        Tienes una personalidad equilibrada y versátil. Puedes ser social cuando la situación lo requiere y también disfrutar la tranquilidad. Sabes cuándo actuar con cautela y cuándo lanzarte, lo que te da una gran adaptabilidad.
+    </p>
+
+    <div class="tags-container">
+        <span class="tag">Adaptable</span>
+        <span class="tag">Flexible</span>
+        <span class="tag">Sociable</span>
+        <span class="tag">Tranquilo</span>
+    </div>
+
+    <div class="stats-container">
+        <div class="stat-row">
+            <span class="label">Introvertido</span>
+            <div class="progress-bg">
+                <div class="progress-fill" style="width: 10%; background-color: #8e7cc3;"></div>
+            </div>
+            <span class="percentage">10%</span>
+        </div>
+
+        <div class="stat-row">
+            <span class="label">Equilibrado</span>
+            <div class="progress-bg">
+                <div class="progress-fill" style="width: 60%; background-color: #00a86b;"></div>
+            </div>
+            <span class="percentage">60%</span>
+        </div>
+
+        <div class="stat-row">
+            <span class="label">Extrovertido</span>
+            <div class="progress-bg">
+                <div class="progress-fill" style="width: 30%; background-color: #f6b26b;"></div>
+            </div>
+            <span class="percentage">30%</span>
+        </div>
+    </div>
+
+    <button class="btn-retry">Volver a intentarlo</button>
+</div>
+
+</body>
+</html>
